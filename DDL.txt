@@ -1,0 +1,48 @@
+DDL MySQL
+
+#Criar Tabela clientes
+
+-- dlopes_banco_web.clientes definition
+
+CREATE TABLE `clientes` (
+  `id_clientes` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `cpf` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `data_Nascimento` date NOT NULL,
+  PRIMARY KEY (`id_clientes`),
+  UNIQUE KEY `cpf` (`cpf`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+#Criar Tabela Produtos
+
+-- dlopes_banco_web.produtos definition
+
+CREATE TABLE `produtos` (
+  `id_produtos` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `descricao` text,
+  `preco` decimal(10,0) NOT NULL,
+  `categoria` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_produtos`),
+  UNIQUE KEY `nome` (`nome`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+#Criar Tabela Pedidos
+
+-- dlopes_banco_web.pedidos definition
+
+CREATE TABLE `pedidos` (
+  `id_pedidos` int NOT NULL AUTO_INCREMENT,
+  `id_cliente` int NOT NULL,
+  `id_produtos` int NOT NULL,
+  `data_pedido` date NOT NULL,
+  `valor_total` decimal(9,2) NOT NULL,
+  PRIMARY KEY (`id_pedidos`),
+  KEY `fk_tabela_produtos` (`id_produtos`),
+  KEY `fk_tabela_cliente` (`id_cliente`),
+  CONSTRAINT `fk_tabela_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_clientes`),
+  CONSTRAINT `fk_tabela_produtos` FOREIGN KEY (`id_produtos`) REFERENCES `produtos` (`id_produtos`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+

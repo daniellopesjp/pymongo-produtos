@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "ab4b14e3-08b9-4519-b1a7-e2d610789453",
+		"name": "Testes independentes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2456013"
+	},
+	"item": [
+		{
+			"name": "Pos - Bd com python",
+			"item": [
+				{
+					"name": "clientes get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/clientes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientes post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"01234567890\",\r\n    \"data_nascimento\": \"1990-06-30\",\r\n    \"email\": \"caio@email.com\",\r\n    \"id_clientes\": 3,\r\n    \"nome\": \"Caio Lacerda Medeiros\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/clientes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientes put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"01234567890\",\r\n    \"data_nascimento\": \"1990-06-30\",\r\n    \"email\": \"caiolacerda@email.com\",\r\n    \"id_clientes\": 3,\r\n    \"nome\": \"Caio Lacerda Medeiros\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/clientes/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"clientes",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientes delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/clientes/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"clientes",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produtos get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/produtos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produtos post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoria\": \"Eletrodoméstico\",\r\n    \"descricao\": \"Refrigerador Eletrolux\",\r\n    \"nome\": \"Geladeira Eletrolux\",\r\n    \"preco\": 4500.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/produtos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produtos put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoria\": \"Eletrodoméstico\",\r\n    \"descricao\": \"Refrigerador Eletrolux\",\r\n    \"nome\": \"Geladeira Eletrolux\",\r\n    \"preco\": 4500.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/produtos/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"produtos",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produtos delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/produtos/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"produtos",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pedido get",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "pedido post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_produtos\": \"3\",\r\n    \"id_cliente\": \"2\",\r\n    \"data_pedido\": \"2023-06-30\",\r\n    \"valor_pedido\": 8901.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/pedido",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pedido put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data_pedido\": \"2023-12-30\",\r\n    \"id_cliente\": \"3\",\r\n    \"id_produtos\": \"1\",\r\n    \"valor_pedido\": 1901.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/pedido/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"pedido",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pedido delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/pedido/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"pedido",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
